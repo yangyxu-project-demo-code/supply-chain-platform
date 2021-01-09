@@ -1,0 +1,41 @@
+{
+  "name": "supply-chain-platform",
+  "version": "0.1.0",
+  "description": "供应链平台",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --watch",
+    "dev.release": "webpack --uglify",
+    "pm2release": "pm2 start pm2setup.js -i max",
+    "release": "nohup zn run config:zn.server.config.js &",
+    "release.huaiqi": "nohup zn run config:zn.server.config.huaiqi.js &",
+    "release.yuyue": "nohup zn run config:zn.server.config.yuyue.js &",
+    "detail": "tail -fn 10 nohup.out",
+    "release.demo": "nohup zn run config:zn.server.config.demo.js &",
+    "debug": "zn run config:zn.server.config.debug.js",
+    "debug.demo": "zn run config:zn.server.config.demo.js",
+    "local.release": "zn run zn_path:../../zn/zeanium-node/",
+    "local": "zn run zn_path:../../zn/zeanium-node/ config:zn.server.config.debug.js",
+    "install.release": "npm install --production",
+    "install.dev": "npm install"
+  },
+  "keywords": [
+    "Project"
+  ],
+  "author": "yangyxu",
+  "license": "MIT",
+  "devDependencies": {
+    "zeanium-react-web": "latest"
+  },
+  "dependencies": {
+    "axios": "^0.18.1",
+    "md5": "^2.2.1",
+    "officegen": "^0.4.8",
+    "rc-datetime-picker": "^1.6.1",
+    "xlsx": "^0.11.10",
+    "zeanium-node": "latest",
+    "zn-plugin-admin": "latest",
+    "zn-plugin-stock": "latest",
+    "zn-plugin-workflow": "latest"
+  }
+}

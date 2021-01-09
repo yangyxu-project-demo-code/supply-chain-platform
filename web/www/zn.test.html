@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="x-rim-auto-match" content="none" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+        <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+        <meta http-equiv="expires" content="0" />
+    </head>
+    <body>
+        <script src='./external/znweb.minx.js'></script>
+        <script src='./external/zn.data.minx.js'></script>
+        <script type="text/javascript" >
+            (function (){
+
+                var Person = zn.Class('test.Person', zn.data.Observable, {
+                    events: ['say', 'eat', 'walk'],
+                    properties: {
+                        name: {
+                            set: function (value){
+                                this._name = value;
+                            },
+                            get: function (value){
+                                return this._name;
+                            }
+                        }
+                    },
+                    methods: {
+                        init: function (values) {
+                            this.sets(values);
+                        },
+                        say: function () {
+                            this.fire('say', 'say hello');
+                        },
+                        eat: function () {
+                            this.fire('eat', 'eat food');
+                        },
+                        walk: function () {
+                            this.fire('walk', 'walk to home.');
+                        }
+                    }
+                });
+
+                var yangyxu = new Person();
+
+                yangyxu.watch('name', function (value, name){
+                    console.log(value, name);
+                });
+
+                yangyxu.name = 'yangyxu';
+                yangyxu.name = 'test';
+
+
+            })()
+        </script>
+    </body>
+</html>

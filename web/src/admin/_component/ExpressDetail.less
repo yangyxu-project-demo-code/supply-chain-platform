@@ -1,0 +1,39 @@
+.zr-express-detail {
+    font: 12px "Microsoft YaHei",Verdana,arial,sans-serif;
+    line-height: 22px;
+    .detail-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #878787;
+        border-bottom: 1px solid #d8d8d8!important;
+        background-color: #fbfbfb!important;
+        &>li{
+            padding: 5px;
+        }
+        &:first-child{
+            .dot{
+                background: url("//cdn.kuaidi100.com/images/ico_status.gif") 0px center no-repeat #fbfbfb !important;
+            }
+        }
+        &:last-child{
+            .dot{
+                color: #FF8c00;
+                border-bottom: none;
+                background-color: #fff!important;
+                background: url("//cdn.kuaidi100.com/images/ico_status.gif") -150px center no-repeat #fbfbfb !important;
+            }
+        }
+        .time{
+            min-width: 160px;
+            text-align: right;
+        }
+        .dot{
+            width: 40px;
+            height: 42px;
+            text-align: center;
+            background: url("//cdn.kuaidi100.com/images/ico_status.gif") -50px center no-repeat #fbfbfb;
+        }
+    }
+
+}

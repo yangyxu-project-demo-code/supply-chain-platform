@@ -1,0 +1,12 @@
+zn.define([
+    './ChunRuiOAUser',
+    './ChunRuiOAExpressCompany',
+    './ChunRuiOACustomer',
+    './ChunRuiOACustomerInvoice',
+    './ChunRuiOACustomerInvoiceDetail',
+    './ChunRuiOACustomerProductQuote',
+    './ChunRuiOASupplier',
+    './ChunRuiOASupplierProductQuote',
+    './ChunRuiOASupplierServiceBack',
+    './ChunRuiOACustomerBill'
+]);
