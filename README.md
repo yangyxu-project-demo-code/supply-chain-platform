@@ -1,6 +1,9 @@
 # supply-chain-platform
 supply-chain-platform
 
+演示链接：http://cr-demo.diandianmian.com/web/www/admin.html#/znpluginadmin.login
+登录账号：admin/admin
+
 ## Node.js安装
 后台和前端都基于Node.js, 所以不管是部署开始开发首选需要安装的是[Node.js](https://nodejs.org/zh-cn/) > v5.0.0, 必须是5.0.0及以上版本。不同的平台有不同的按照方式, 根据具体情况参考下面描述。
 
